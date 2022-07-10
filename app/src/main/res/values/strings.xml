@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Matrix_Gilad_LevinsonApp</string>
+    <string name="hello_blank_fragment">Hello Extended fragment</string>
+    <string name="mapbox_access_token">pk.eyJ1IjoiZ2lsYWRsMSIsImEiOiJjbDRrZXYwdG0wZWVyM21vMWtwNmNxNDk4In0.KyoqRXfEPPKOfRuIGJkppg</string>
+    <string name="choose_date">בחר תאריך</string>
+    <string name="choose_hour">בחר שעה</string>
+    <string name="confirm">אישור</string>
+    <string name="cancel">ביטול</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="tab_text_1">כל ההטבות</string>
+    <string name="tab_text_2">המומלצים</string>
+    <string name="tab_text_3">הפינוקים שלי</string>
+    <string name="tab_text_4">המועדפים</string>
+    <string name="cat1">קטגוריה 1</string>
+    <string name="cat2">קטגוריה 2</string>
+    <string name="cat3">קטגוריה 3</string>
+    <string name="cat4">קטגוריה 4</string>
+    <string name="cat5">קטגוריה 5</string>
+</resources>
