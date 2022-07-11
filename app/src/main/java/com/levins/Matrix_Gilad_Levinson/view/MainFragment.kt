@@ -10,12 +10,14 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.SnapHelper
 import com.levins.Matrix_Gilad_Levinson.Matrix_Gilad_LevinsonApplication
-import com.levins.Matrix_Gilad_Levinson.repository.PileRepository
-import com.levins.Matrix_Gilad_Levinson.view.RecyclerAdapter
 import com.levins.Matrix_Gilad_Levinson.R
 import com.levins.Matrix_Gilad_Levinson.model.DataObjectX
+import com.levins.Matrix_Gilad_Levinson.repository.PileRepository
+import com.levins.Matrix_Gilad_Levinson.view.RecyclerAdapter
 import kotlinx.android.synthetic.main.main_fragment.*
 import kotlinx.coroutines.launch
 

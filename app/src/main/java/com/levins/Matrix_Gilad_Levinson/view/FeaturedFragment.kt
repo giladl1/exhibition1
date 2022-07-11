@@ -10,7 +10,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.SnapHelper
 import com.levins.Matrix_Gilad_Levinson.Matrix_Gilad_LevinsonApplication
 import com.levins.Matrix_Gilad_Levinson.repository.PileRepository
 import com.levins.Matrix_Gilad_Levinson.view.RecyclerAdapter
@@ -25,10 +27,10 @@ class FeaturedFragment : Fragment() {
     lateinit var viewModel: MainViewModel
     lateinit var viewAdapter: RecyclerView.Adapter<*>
     lateinit var viewManager: RecyclerView.LayoutManager
-//    lateinit var lastView: View
     lateinit var results : ArrayList<resultItem>
     companion object {
         fun newInstance() = FeaturedFragment()
+
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,7 +43,18 @@ class FeaturedFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        lastView = main
+        //making the special effect of whole central item presented in the layout:
+        val snapHelper1: SnapHelper = PagerSnapHelper()
+        val snapHelper2: SnapHelper = PagerSnapHelper()
+        val snapHelper3: SnapHelper = PagerSnapHelper()
+        val snapHelper4: SnapHelper = PagerSnapHelper()
+        val snapHelper5: SnapHelper = PagerSnapHelper()
+
+        snapHelper1.attachToRecyclerView(cat1RecyclerView)
+        snapHelper2.attachToRecyclerView(cat2RecyclerView)
+        snapHelper3.attachToRecyclerView(cat3RecyclerView)
+        snapHelper4.attachToRecyclerView(cat4RecyclerView)
+        snapHelper5.attachToRecyclerView(cat5RecyclerView)
     }
     private fun engageRepositoryToGetLocations() {
         viewModel = ViewModelProvider(this, MainViewModelFactory(repository))
@@ -67,6 +80,7 @@ class FeaturedFragment : Fragment() {
                 }
 
             }
+
             operateAdapterWithElements(cat1RecyclerView,List1)
             operateAdapterWithElements(cat2RecyclerView,List2)
             operateAdapterWithElements(cat3RecyclerView,List3)

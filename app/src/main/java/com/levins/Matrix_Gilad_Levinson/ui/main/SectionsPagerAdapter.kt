@@ -8,10 +8,13 @@ import com.levins.Matrix_Gilad_Levinson.R
 import com.mapbox.maps.extension.style.expressions.dsl.generated.switchCase
 
 private val TAB_TITLES = arrayOf(
-    R.string.tab_text_1,
+    R.string.tab_text_4,
+    R.string.tab_text_3 ,
     R.string.tab_text_2,
-    R.string.tab_text_3,
-    R.string.tab_text_4
+    R.string.tab_text_1
+
+
+
 )
 
 /**
@@ -25,14 +28,14 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
         when (position) {
-            0 -> return MainFragment.newInstance()
-            1 -> return FeaturedFragment.newInstance()
-            2 -> return PlaceholderFragment.newInstance(position + 1, )
+            0 -> return PlaceholderFragment.newInstance(position + 1)
+            1 -> return PlaceholderFragment.newInstance(position + 1, )
+            2 -> return FeaturedFragment.newInstance()
             else ->{
-                return PlaceholderFragment.newInstance(position + 1)
+                return MainFragment.newInstance()
+
             }
         }
-        return PlaceholderFragment.newInstance(position + 1)
     }
 
     override fun getPageTitle(position: Int): CharSequence? {
